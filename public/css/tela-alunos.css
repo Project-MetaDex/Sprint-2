@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #F8F9FB;
+}
+
+.tab-buttons {
+    margin-top: 9vh;
+    padding: 15px 40px;
+    height: 91vh;
+    width: 100%;
+}
+
+.tab-btn {
+    padding: 5px;
+    height: 6vh;
+    width: 150px;
+    background-color: #cacaca;
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tab-btn:hover {
+    transition: 0.5s;
+    background-color: #b0b0b0;
+}
+
+.tab-btn.active {
+    background-color: #8956B9;
+    /* font-weight: bold; */
+    color: #000;
+}
+
+.tab-contents {
+    height: 93%;
+    width: 100%;
+    padding: 10px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    height: 100%;
+    width: 100%; 
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    display: none !important;
+    
+    opacity: 0;
+}
+
+/* Inicio Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Aplicamos a animação quando a aba NÃO estiver com 'hidden' */
+.content:not(.hidden) {
+    animation: fadeIn 0.4s ease-out;
+}
+/* Fim Animações */
+
+#DashGeral {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 2.3fr;
+    height: 100%;
+    gap: 30px;
+    padding: 10px;
+}
+
+.kpi-grande {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 100%;
+    padding: 0px 10px;
+
+}
+
+.card-info {
+    background-color: rgba(0, 81, 255, 0.507);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.30);
+}
+
+.grafico {
+    background-color: rgba(255, 255, 0, 0.452);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kpi-pequena {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.kpi {
+    background-color: rgba(0, 128, 0, 0.479);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.30);
+}
+
+#ListAlunos {
+    padding: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.info-aluno {
+    background-color: #e0e0e0;
+    height: 100%;
+    padding: 0px 40px;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 15px;
+    
+    transition: 0.5s;
+}
+
+.info-aluno:hover {
+    background-color: #b0b0b0;
+    transition: 0.5s;
+}
+
+.info-aluno img {
+    width: 70x;       /* Ajuste o tamanho aqui */
+    height: 70px;
+
+}

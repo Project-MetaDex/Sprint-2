@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <title>MetaDex | Tela Alunos</title>
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="css/LandingPage.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="./css/tela-alunos.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+
+
+<body>
+
+  <!-- Inicio Navbar -->
+
+  <nav class="Nav-Container">
+
+    <img id="logo" src="./assets/icon/Logo-Nav.svg" alt="">
+
+    <ul class="Nav-Options">
+      <li class="Selected"><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="index.html">Tela Inicial</a>
+      </li>
+      <li><a href="cadastro.html">Pokedex</a></li>
+      <li><a href="cadastro.html">Ranking</a></li>
+      <li><a href="cadastro.html">Simulações</a></li>
+      <li><a href="cadastro.html">Alunos</a></li>
+    </ul>
+
+    <div class="Button-Container">
+      <button class="Button-Nav Cadastro" onclick="window.location.href='./cadastro.html'">Logar</button>
+      <button class="Button-Nav Login" onclick="window.location.href='./login.html'">Cadastrar\Perfil</button>
+    </div>
+  </nav>
+
+  <!-- Fim Navbar -->
+
+
+  <div class="tab-buttons">
+    <button class="tab-btn active" content-id="DashGeral" onclick="trocarAba('DashGeral', this)">
+      DashGeral
+    </button>
+    <button class="tab-btn" content-id="ListAlunos" onclick="trocarAba('ListAlunos', this)">
+      Lista de Alunos
+    </button>
+
+    <div class="tab-contents">
+
+      <!-- INICIO CONTEUDO ABA - DASHBOARD GERAL -->
+      <div class="content" id="DashGeral">
+
+        <div class="kpi-grande">
+          <div class="card-info">Métrica 1</div>
+          <div class="card-info">Métrica 2</div>
+          <div class="card-info">Métrica 3</div>
+        </div>
+
+        <div class="grafico">Gráficos</div>
+
+        <div class="kpi-pequena">
+          <div class="kpi">KPI</div>
+          <div class="kpi">KPI</div>
+          <div class="kpi">KPI</div>
+          <div class="kpi">KPI</div>
+        </div>
+
+      </div>
+      <!-- FIM CONTEUDO ABA - DASHBOARD GERAL -->
+
+      <!-- INICIO CONTEUDO ABA - LISTA DE ALUNOS -->
+      <div class="content hidden" id="ListAlunos">
+
+        <div class="info-aluno">
+          <img src="./assets/icon/Logo-Nav.svg" alt="">
+          <div>Nome Aluno</div>
+          <div>Taxa de Vitorias</div>
+          <div>Quantidade de Pontos</div>
+          <div>Quantidade de campeonatos</div>
+        </div>
+        
+        <div class="info-aluno">
+          <img src="./assets/icon/Logo-Nav.svg" alt="">
+          <div>Nome Aluno</div>
+          <div>Taxa de Vitorias</div>
+          <div>Quantidade de Pontos</div>
+          <div>Quantidade de campeonatos</div>
+        </div>
+
+        <div class="info-aluno">
+          <img src="./assets/icon/Logo-Nav.svg" alt="">
+          <div>Nome Aluno</div>
+          <div>Taxa de Vitorias</div>
+          <div>Quantidade de Pontos</div>
+          <div>Quantidade de campeonatos</div>
+        </div>
+
+        <div class="info-aluno">
+          <img src="./assets/icon/Logo-Nav.svg" alt="">
+          <div>Nome Aluno</div>
+          <div>Taxa de Vitorias</div>
+          <div>Quantidade de Pontos</div>
+          <div>Quantidade de campeonatos</div>
+        </div>
+        
+      </div>
+      <!-- FIM CONTEUDO ABA - LISTA DE ALUNOS -->
+
+    </div>
+  </div>
+  
+</body>
+</html>
+<script>
+
+  function trocarAba(idDaAba, elementoClicado) {
+    // --- PARTE 1: CONTEÚDO (O que você já fez) ---
+    document.querySelectorAll('.content').forEach(aba => {
+        aba.classList.add('hidden');
+    });
+    document.getElementById(idDaAba).classList.remove('hidden');
+
+    // --- PARTE 2: BOTÕES (A novidade) ---
+    // 1. Tira o 'active' de TODOS os botões
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // 2. Adiciona 'active' apenas no botão que foi clicado
+    elementoClicado.classList.add('active');
+  }
+
+</script>
