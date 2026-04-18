@@ -1,0 +1,47 @@
+/* Container principal para dar um espaçamento entre as linhas */
+.status-container {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espaço entre cada linha de status */
+}
+
+/* Cada linha contendo o Nome, Número e a Barra */
+.status-row {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo do Nome do Status (HP, Attack...) */
+.status-label {
+  width: 70px;
+  color: #88929b; /* Cor cinza azulado */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Estilo do Número (78, 84...) */
+.status-number {
+  width: 40px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Fundo da barra (a parte cinza claro) */
+.bar-background {
+  flex-grow: 1; /* Faz a barra ocupar todo o espaço restante à direita */
+  height: 14px;
+  background-color: #e2e8f0; 
+  border-radius: 10px; /* Deixa as bordas arredondadas */
+  overflow: hidden; /* Garante que a barra amarela não vaze para fora das bordas */
+}
+
+/* O preenchimento da barra (a parte amarela) */
+.bar-fill {
+  height: 100%;
+  background-color: #facc15; /* Cor amarela */
+  border-radius: 10px;
+  transition: width 0.5s ease; /* Animação suave ao carregar */
+}

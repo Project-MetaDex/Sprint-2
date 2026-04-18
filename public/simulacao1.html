@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacao 1</title>
+    <link rel="stylesheet" href="css/simulacao1.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <!-- Inicio Navbar -->
+
+    <nav class="Nav-Container">
+
+      <img onclick="Side('Open')" id="options" src="assets/icon/Icon-Hanburguer.svg" alt="">
+      <img id="logo" src="./assets/icon/Logo-Nav.svg" alt="">
+
+      <ul class="Nav-Options">
+        <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="index.html">Home</a></li> 
+        <li><a href="cadastro.html">Pokedex</a></li>
+        <li><a href="cadastro.html">Ranks</a></li>
+        <li><a href="cadastro.html">Team Buider</a></li>
+        <li><a href="cadastro.html">Battle Simulator</a></li>
+      </ul>
+
+      <div class="Button-Container">
+        <button class="Button-Nav Cadastro" onclick="window.location.href='./cadastro.html'" >Cadastre-se</button>
+        <button class="Button-Nav Login" onclick="window.location.href='./login.html'" >Entrar</button>
+      </div>
+    </nav>
+
+    <aside style="display: none;" class="Side-Container">
+      
+      <button onclick="Side('Close')"><img id="Close-Side" src="assets/icon/Icon-Close.svg" alt=""></button>
+
+      <div class="Side-Flex">
+        <div class="Perfil">
+
+          <img src="assets/icon/Icon-User.svg" alt="">
+          <button class="Button-Side Login-Side" onclick="window.location.href='./login.html'" >Entrar</button>
+
+        </div>
+
+        <ul class="Side-Options">
+          <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="index.html">Home</a></li> 
+          <li><a href="cadastro.html">Pokedex</a></li>
+          <li><a href="cadastro.html">Ranks</a></li>
+          <li><a href="cadastro.html">Team Buider</a></li>
+          <li><a href="cadastro.html">Battle Simulator</a></li>
+        </ul>
+
+        <img class="Side-Logo" src="./assets/icon/Logo-Nav.svg" alt="">
+      </div>
+    </aside>
+
+    <!-- Fim Navbar -->
+
+
+    <p>Simulador 01</p>
+    
+    <span class="conteiner-principal">
+      <div class="pokemon-selecionado">
+      <img src="https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F150.webp&w=640&q=75">
+      <h2>Mewtwo </h2>
+      <div class="status-container">
+
+        <div class="status-row">
+        <span class="status-label">HP</span>
+        <span class="status-number">78</span>
+        <div class="bar-background">
+            <div class="bar-fill" style="width: 52%;"></div>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <span class="status-label">Attack</span>
+        <span class="status-number">84</span>
+        <div class="bar-background">
+            <div class="bar-fill" style="width: 56%;"></div>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <span class="status-label">Sp. Atk</span>
+        <span class="status-number">109</span>
+        <div class="bar-background">
+            <div class="bar-fill" style="width: 72%;"></div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+
+    </span>
+</body>
+</html>

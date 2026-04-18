@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+
+    <div class="status-container">
+  
+  <div class="status-row">
+    <span class="status-label">HP</span>
+    <span class="status-number">78</span>
+    <div class="bar-background">
+      <div class="bar-fill" style="width: 52%;"></div>
+    </div>
+  </div>
+
+  <div class="status-row">
+    <span class="status-label">Attack</span>
+    <span class="status-number">84</span>
+    <div class="bar-background">
+      <div class="bar-fill" style="width: 56%;"></div>
+    </div>
+  </div>
+
+  <div class="status-row">
+    <span class="status-label">Sp. Atk</span>
+    <span class="status-number">109</span>
+    <div class="bar-background">
+      <div class="bar-fill" style="width: 72%;"></div>
+    </div>
+  </div>
+
+<!--   
+  Como a estrutura funciona?
+Usamos o display: flex na .status-row. O Flexbox é excelente para colocar coisas lado a lado.
+
+O .status-label ganha um tamanho fixo (70px) para que todos os nomes fiquem alinhados verticalmente.
+
+O .status-number também ganha tamanho fixo (40px).
+
+A .bar-background recebe flex-grow: 1. Isso diz ao navegador: "pegue todo o espaço que sobrou nessa linha e use para a barra".
+
+Como a barra é preenchida?
+O segredo está no HTML, especificamente na tag <div class="bar-fill" style="width: 52%;"></div>.
+
+Para que a barra represente o número, você precisa transformar esse número em uma porcentagem. Para isso, você define qual é o status
+ máximo possível (no universo Pokémon,geralmente usa-se uma base como 150 ou 255 para as barras).
+
+A matemática (Regra de Três):
+Se considerarmos que o máximo da sua barra é 150:
+
+Cálculo: (Número do Status / Status Máximo) * 100
+
+Exemplo do HP: (78 / 150) * 100 = 52%
+
+Exemplo do Sp. Atk: (109 / 150) * 100 = 72%
+
+Se você estiver fazendo isso com JavaScript no futuro, você só precisará pegar o número, fazer essa continha, e injetar o 
+resultado no style="width: X%" da bar-fill.
+
+(Nota: Na sua imagem as barras parecem divididas em "gomos" ou pílulas. Para manter o código simples e fácil de 
+entender para iniciantes, construímos a barra como um preenchimento sólido contínuo, que é o formato mais utilizado 
+na web. O efeito de gomos exigiria técnicas mais avançadas de CSS, como máscaras de repetição (mask-image)). -->
+</div>
+    
+</body>
+</html>
