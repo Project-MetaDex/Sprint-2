@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Inicio config css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    font-family: 'Poppins';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+html, body{
+
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #101828;
+
+}
+
+/* Fim reset css */
+
+.titulo-link{
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    font-size: 25px;
+    margin-bottom: 3%;
+}
+
+.titulo-link a{
+    position: relative;
+    padding: 2px;
+    left: 28%;
+    width: 170px;
+    height: 40px;
+    border-radius:20px;
+    background-color: #D84B36;
+    border: solid 4px  rgb(255, 161, 161);
+    color: aliceblue;
+    padding-left: 2.79%;
+    font-size: 18px;
+}
+
+.container-principal{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.container-pokemon{
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    margin-bottom: 2%;
+}
+
+.pokenon-selecionado{
+    display: flex;
+    background-color: rgb(65, 105, 92);
+    width: 15vw;
+    height: 30vh;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.50);
+
+}
+
+.pokenon-selecionado span{
+        font-size: 22px;
+        color: aliceblue;
+
+}
+
+.pokenon-selecionado img{
+    width: 12vw;
+}
+
+
+.container-ataques{
+display: flex;
+flex-direction: column;
+gap: 20px;
+justify-content: center;
+}
+
+
+
+.ataques{
+    display: flex;
+    background-color: #39455e;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 10px;
+    gap: 60px;
+    align-items: center;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.ataques img{
+    position: relative;
+    width: 1.5vw;
+    height: 3.5vh;
+    left: 5%;
+}
+
+
+.container-detalhe-simulacao{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+
+    
+}
+
+.container-detalhe-simulacao div{
+    display: flex;
+    background-color: #101828;
+    color: aliceblue;
+    width: 40vw;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 1);
+
+}
