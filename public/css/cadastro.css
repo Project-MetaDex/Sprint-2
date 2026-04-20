@@ -159,11 +159,10 @@
 
         .charmander {
             position: absolute;
-            width: 700px; 
+            width: 75%; 
             object-fit: contain;
             z-index: 2;
             bottom: 10%; 
-            left: 8%; 
         }
 
 

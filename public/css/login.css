@@ -103,7 +103,7 @@
         .botao:hover {
             background-color: #bd4f0f;
         }
-       
+
         /* ja tem conta */
         .ja-tem-conta {
             text-align: center;
@@ -155,7 +155,7 @@
 
         .charmander {
             position: absolute;
-            width: 1110px; 
+            width: 130%; 
             object-fit: contain;
             z-index: 2;
             bottom: 16%; 
