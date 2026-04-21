@@ -33,7 +33,6 @@ body {
 
 .tab-btn.active {
     background-color: #8956B9;
-    /* font-weight: bold; */
     color: #000;
 }
 
@@ -54,7 +53,6 @@ body {
 
 .hidden {
     display: none !important;
-    
     opacity: 0;
 }
 
@@ -70,6 +68,8 @@ body {
 }
 /* Fim Animações */
 
+
+/* INICIO ABA DASHBOARD */
 #DashGeral {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -86,22 +86,24 @@ body {
     gap: 30px;
     height: 100%;
     padding: 0px 10px;
-
 }
 
 .card-info {
-    background-color: rgba(0, 81, 255, 0.507);
-    border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.30);
 }
 
 .grafico {
-    background-color: rgba(255, 255, 0, 0.452);
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.30);
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,16 +117,20 @@ body {
 }
 
 .kpi {
-    background-color: rgba(0, 128, 0, 0.479);
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.30);
 }
+/* FIM ABA DASHBOARD */
+
+/* INICIO ABA LISTA ALUNOS */
 
 #ListAlunos {
-    padding: 10px;
+    padding: 10px 15px;
     
     display: grid;
     grid-template-columns: 1fr;
@@ -135,24 +141,46 @@ body {
 .info-aluno {
     background-color: #e0e0e0;
     height: 100%;
-    padding: 0px 40px;
-    border-radius: 10px;
+    padding: 0px 30px;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr;
     align-items: center;
     gap: 15px;
     
     transition: 0.5s;
 }
 
-.info-aluno:hover {
-    background-color: #b0b0b0;
-    transition: 0.5s;
+.imagem-perfil {
+    background-color: #e2e1e1;
+    border: 4px solid #A37ACC;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+    justify-self: center;
 }
 
-.info-aluno img {
-    width: 70x;       /* Ajuste o tamanho aqui */
-    height: 70px;
+.btn-verPerfil {
+    background-color: #A37ACC;
+    border-radius: 15px;
+    color: white;
+    padding: 7px 10px;
+    transition: 0.5s;
+    gap: 5px;
+}
 
+.btn-verPerfil:hover {
+    background-color: #8956B9;
+     transition: 0.5s;
+     cursor: pointer;
 }

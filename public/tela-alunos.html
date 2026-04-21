@@ -79,35 +79,47 @@
       <div class="content hidden" id="ListAlunos">
 
         <div class="info-aluno">
-          <img src="./assets/icon/Logo-Nav.svg" alt="">
+          <div class="imagem-perfil">
+            <!-- <img src="./assets/icon/Logo-Nav.svg" alt=""> -->
+          </div>
           <div>Nome Aluno</div>
           <div>Taxa de Vitorias</div>
           <div>Quantidade de Pontos</div>
           <div>Quantidade de campeonatos</div>
+          <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
         
-        <div class="info-aluno">
-          <img src="./assets/icon/Logo-Nav.svg" alt="">
+        <div class="info-aluno" onclick="irParaAluno()">
+          <div class="imagem-perfil">
+            <!-- <img src="./assets/icon/Logo-Nav.svg" alt=""> -->
+          </div>
           <div>Nome Aluno</div>
           <div>Taxa de Vitorias</div>
           <div>Quantidade de Pontos</div>
           <div>Quantidade de campeonatos</div>
+          <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
-
-        <div class="info-aluno">
-          <img src="./assets/icon/Logo-Nav.svg" alt="">
+        
+        <div class="info-aluno" onclick="irParaAluno()">
+          <div class="imagem-perfil">
+            <!-- <img src="./assets/icon/Logo-Nav.svg" alt=""> -->
+          </div>
           <div>Nome Aluno</div>
           <div>Taxa de Vitorias</div>
           <div>Quantidade de Pontos</div>
           <div>Quantidade de campeonatos</div>
+          <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
-
-        <div class="info-aluno">
-          <img src="./assets/icon/Logo-Nav.svg" alt="">
+        
+        <div class="info-aluno" onclick="irParaAluno()">
+          <div class="imagem-perfil">
+            <!-- <img src="./assets/icon/Logo-Nav.svg" alt=""> -->
+          </div>
           <div>Nome Aluno</div>
           <div>Taxa de Vitorias</div>
           <div>Quantidade de Pontos</div>
           <div>Quantidade de campeonatos</div>
+          <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
         
       </div>
@@ -115,7 +127,7 @@
 
     </div>
   </div>
-  
+
 </body>
 </html>
 <script>
@@ -135,6 +147,10 @@
 
     // 2. Adiciona 'active' apenas no botão que foi clicado
     elementoClicado.classList.add('active');
+  }
+
+  function irParaAluno() {
+    window.location.href = "tela-aluno.html";
   }
 
 </script>

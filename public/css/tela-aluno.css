@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #F8F9FB;
+}
+
+.container-perfil {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1.75fr;
+    grid-template-rows: 1fr 1.25fr;
+    gap: 25px;
+    padding: 30px 50px;
+    margin-top: 9vh;
+    height: 91vh;
+}
+
+.imagem-perfil {
+    background-color: #e2e1e1;
+    border: 4px solid #A37ACC;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1;
+    margin: auto;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    height: 100%; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+
+.imagem-perfil img {
+    width: 90%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.dados-aluno {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #edf2f7;
+    padding: 20px;
+
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.graficos {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #edf2f7;
+    padding: 20px;
+
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+.lista-times {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+    padding: 20px;
+    
+    grid-column: 3;
+    grid-row: 1 / span 2;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+
+.lista-times h1 {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+}
+
+.container-times {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.time {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 0 20px;
+    max-height: 70px;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time button {
+    background-color: #A37ACC;
+    border-radius: 15px;
+    color: white;
+    padding: 7px 10px;
+    transition: 0.5s;
+    gap: 5px;
+}
+
+.time button:hover {
+     background-color: #8956B9;
+     transition: 0.5s;
+     cursor: pointer;
+}
