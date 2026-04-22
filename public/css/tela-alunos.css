@@ -135,11 +135,11 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
 .info-aluno {
-    background-color: #e0e0e0;
+    background-color: #FFFFFF;
     height: 100%;
     padding: 0px 30px;
     border-radius: 15px;
@@ -149,7 +149,7 @@ body {
     display: grid;
     grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     
     transition: 0.5s;
 }
@@ -168,6 +168,95 @@ body {
     overflow: hidden;
     border-radius: 50%;
     justify-self: center;
+}
+
+.imagem-perfil img {
+    height: 100%;
+    width: 100%;
+}
+
+.nome {
+    height: 77%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nome strong {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    align-self: flex-end;
+}
+
+.nome small {
+    font-size: 15px;
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
+.tx-vitoria {
+    height: 77%;
+    padding: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tx-vitoria small {
+    font-size: 15px;
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
+.tx-vitoria strong {
+    font-size: 30px;
+    letter-spacing: 3px;
+    align-self: flex-end;
+}
+
+.qtd-pontos {
+    height: 77%;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.qtd-pontos small {
+    font-size: 15px;
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
+.qtd-pontos strong {
+    font-size: 30px;
+    letter-spacing: 3px;
+    align-self: flex-end;
+}
+
+.qtd-camp {
+    height: 77%;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.qtd-camp small {
+    font-size: 15px;
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
+.qtd-camp strong {
+    font-size: 30px;
+    letter-spacing: 3px;
+    align-self: flex-end;
 }
 
 .btn-verPerfil {
