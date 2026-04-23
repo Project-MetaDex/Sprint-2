@@ -163,9 +163,132 @@ body, html{
 
 .containerPokemonEdit{
 
+    display: grid;
+    grid-template-areas: "img detalhe golpes"
+    "status status golpes";
+    grid-template-columns: .75fr 1fr 1fr;
     grid-area: Pokemon;
     justify-self: center;
     width: 95%;
     height: 100%;
+    background-color: #fff;
+    padding: 1%;
+    border-radius: 10px;
+    gap: 2%;
+
+}
+
+.imgPokemon {
+
+    width: 100%;
+
+}
+
+.containerDetalhes {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+
+}
+
+.nomePokemon {
+
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+
+}
+
+.tipos{
+
+    display: flex;
+    gap: 2%;
+
+}
+
+.etiqueta{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 35%;
+    height: 100%;
+    color: #fafafa;
+
+}
+
+.item{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.containerItem{
+
+    display: flex;
+    width: 100%;
+    gap: 5%;
+
+}
+
+.CardItem {
+
+    display: grid;
+    grid-template-areas: "icon nome mais";
+    grid-template-columns: .5fr 1fr .5fr;
+    gap: 5%;
+    background-color: #f3f3f3;
+    width: 80%;
+    padding: 2% 5%;
+    border-radius: 10px;
+    font-weight: 600;
+    border: solid 1px #D7D5DF;
+}
+
+.mais{
+
+    display: flex;
+    justify-self: end;
+}
+
+.CardItem img{
+
+    width: 50%;
+    justify-self: center;
+
+}
+
+.containerHabilidade{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5%;
+
+}
+
+.cardHabilidade {
+
+    display: grid;
+    grid-template-areas: "icon nome mais";
+    grid-template-columns: .5fr 1fr .5fr;
+    align-items: center;
+    gap: 5%;
+    background-color: #f3f3f3;
+    width: 80%;
+    padding: 2% 5%;
+    border-radius: 10px;
+    font-weight: 600;
+    border: solid 1px #D7D5DF;
+
+}
+
+.cardHabilidade img {
+
+    width: 50%;
+    justify-self: center;
 
 }
