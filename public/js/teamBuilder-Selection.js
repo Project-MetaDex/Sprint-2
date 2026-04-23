@@ -106,7 +106,7 @@ function Adicionar(pokemon){
     }else{
         var continuar = confirm("Seu time esta cheio deseja deseja continuar ?")
         if(continuar){
-            pokemonSelected.slice(0, 1)
+            pokemonSelected.splice(0, 1)
             pokemonSelected.push(pokemonList[pokemon])
             document.querySelector(".cardSelecionado").remove()
             ConstruirCardSelectd()
@@ -126,9 +126,9 @@ function ConstruirCardSelectd(){
         <div id="IdPokemon${i}" class="cardSelecionado">
             <img src="${element.sprites.front_default}" alt="">
             <div class="selecionadosDetalhes">
-                <h3><a href="#" onclick="">${element.name}</a></h3>
-                <span class="tipo1 ${type1}">${type1}</span>
-                <span class="tipo2 ${type2? type2 : "" }">${type2? type2 : ""}</span>
+                <h3><a href="#" onclick="EditarPokemon(${i})">${element.name}</a></h3>
+                <span class="tipos tipo1 ${type1}">${type1}</span>
+                <span class="tipos tipo2 ${type2? type2 : "" }">${type2? type2 : ""}</span>
             </div>
             <button class="excluir" onclick="RemoverPokemon('IdPokemon${i}', ${i})"><img id="imgExcluir" src="assets/icon/Icon-Trash.svg" alt=""></button>
         </div>
@@ -143,5 +143,18 @@ function RemoverPokemon(pokemon, index){
 
     pokemonSelected.splice(index, 1)
     document.querySelector(`#${pokemon}`).remove()
+
+}
+
+function EditarPokemon(index){  
+
+    sessionStorage.clear()
+
+    for (let i = 0; i < pokemonSelected.length; i++) {
+        const element = pokemonSelected[i];
+        sessionStorage.setItem(`POKEMON${i}`, JSON.stringify(element))
+    }
+
+    location.href = "teamBuilder-Pokemon.html"
 
 }

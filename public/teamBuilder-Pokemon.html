@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Builder</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/teamBuilder-Pokemon.css">
+
+</head>
+<body onload="ConstruirCardSelectd()">
+
+    <!-- Inicio Navbar -->
+
+    <nav class="Nav-Container">
+
+      <img onclick="Side('Open')" id="options" src="assets/icon/Icon-Hanburguer.svg" alt="">
+      <img id="logo" src="./assets/icon/Logo-Nav.svg" alt="">
+
+      <ul class="Nav-Options">
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="cadastro.html">Pokedex</a></li>
+        <li><a href="cadastro.html">Ranks</a></li>
+        <li class="Selected"><a href="#"><img src="./assets/icon/Icon-NavSelected.svg" alt="">Team Buider</a></li>
+        <li><a href="cadastro.html">Battle Simulator</a></li>
+      </ul>
+
+      <div class="Button-Container">
+        <button class="Button-Nav Cadastro" onclick="window.location.href='./cadastro.html'" >Cadastre-se</button>
+        <button class="Button-Nav Login" onclick="window.location.href='./login.html'" >Entrar</button>
+      </div>
+    </nav>
+
+    <aside style="display: none;" class="Side-Container">
+      
+      <button onclick="Side('Close')"><img id="Close-Side" src="assets/icon/Icon-Close.svg" alt=""></button>
+
+      <div class="Side-Flex">
+        <div class="Perfil">
+
+          <img src="assets/icon/Icon-User.svg" alt="">
+          <button class="Button-Side Login-Side" onclick="window.location.href='./login.html'" >Entrar</button>
+
+        </div>
+
+        <ul class="Side-Options">
+          <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Home</a></li> 
+          <li><a href="cadastro.html">Pokedex</a></li>
+          <li><a href="cadastro.html">Ranks</a></li>
+          <li><a href="cadastro.html">Team Buider</a></li>
+          <li><a href="cadastro.html">Battle Simulator</a></li>
+        </ul>
+
+        <img class="Side-Logo" src="./assets/icon/Logo-Nav.svg" alt="">
+      </div>
+    </aside>
+
+    <!-- Fim Navbar -->
+
+    <div class="container">
+        <div class="containerPokemonEdit">
+          <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png" alt="">
+
+          <div class="containerDetalhes">
+            <h2>Nome</h2>
+            <div class="detalhes">
+              <div class="tipo1">
+                <span>Tipo01</span>
+                <span>Tipo02</span>
+              </div>
+              <div class="tipo2">
+
+              </div>
+            </div>
+          </div>
+      
+        </div>
+
+        <div class="btnContainer">
+          <button id="btnVoltar">Voltar</button>
+          <button id="btnSalvar">Salvar</button>
+        </div>
+
+        <div class="containerPokemonSelected">
+            <div class="title">
+                <h3>Pokémon selecionados</h3>
+            </div>
+
+            <div class="containerCardSelected">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/teamBuilder-Pokemon.js"></script>
+
+</body>
+</html>
