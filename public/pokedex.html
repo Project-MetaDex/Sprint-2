@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Metadex | Pokedex</title>
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/LandingPage.css">
+  <link rel="stylesheet" href="css/pokedex.css">
+  <script src="js/sideBar.js"></script>
+</head>
+
+<body>
+
+  <main class="Container">
+
+    <!-- Inicio Navbar -->
+
+    <nav class="Nav-Container">
+
+      <img onclick="Side('Open')" id="options" src="assets/icon/Icon-Hanburguer.svg" alt="">
+      <img id="logo" src="./assets/icon/Logo-Nav.svg" alt="">
+
+      <ul class="Nav-Options">
+        <li><a href="index.html">Home</a></li>
+        <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Pokedex</a></li> 
+        <li><a href="cadastro.html">Ranks</a></li>
+        <li><a href="cadastro.html">Team Buider</a></li>
+        <li><a href="cadastro.html">Battle Simulator</a></li>
+      </ul>
+
+      <div class="Button-Container">
+        <button class="Button-Nav Cadastro" onclick="window.location.href='./cadastro.html'" >Cadastre-se</button>
+        <button class="Button-Nav Login" onclick="window.location.href='./login.html'" >Entrar</button>
+      </div>
+    </nav>
+
+    <aside style="display: none;" class="Side-Container">
+      
+      <button onclick="Side('Close')"><img id="Close-Side" src="assets/icon/Icon-Close.svg" alt=""></button>
+
+      <div class="Side-Flex">
+        <div class="Perfil">
+
+          <img src="assets/icon/Icon-User.svg" alt="">
+          <button class="Button-Side Login-Side" onclick="window.location.href='./login.html'" >Entrar</button>
+
+        </div>
+
+        <ul class="Side-Options">
+          <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Home</a></li> 
+          <li><a href="cadastro.html">Pokedex</a></li>
+          <li><a href="cadastro.html">Ranks</a></li>
+          <li><a href="cadastro.html">Team Buider</a></li>
+          <li><a href="cadastro.html">Battle Simulator</a></li>
+        </ul>
+
+        <img class="Side-Logo" src="./assets/icon/Logo-Nav.svg" alt="">
+      </div>
+    </aside>
+
+    <!-- Fim Navbar -->
+
+    <!-- Container de Pesquisa -->
+     <div class="background">
+        <div class="elementos-pesquisa">
+            <div class="barra-pesquisa">
+                <input type="text" name="" placeholder="Pesquisar">
+            </div>
+
+            <div class="filtro">   
+                <img src="assets/icon/Icon-Close.svg" alt="Filtro">
+            </div>
+
+            <div class="filtro">
+                <img src="assets/icon/Icon-Close.svg" alt="Filtro">
+            </div>
+
+            <div class="filtro">
+                <img src="assets/icon/Icon-Close.svg" alt="Filtro">
+            </div>
+
+            <div class="filtro">
+                <img src="assets/icon/Icon-Close.svg" alt="Filtro">
+            </div>
+
+            <div class="filtro">
+                <img src="assets/icon/Icon-Close.svg" alt="Filtro">
+            </div>
+        </div>
+    <!-- Fim do Container de Pesquisa -->
+
+    <!-- Tipo de Pesquisa -->
+      <div class="espacamento">
+        <div class="tipo-pesquisa">
+            <div class="tipo">
+                <img src="assets/imgs/Pokedex.jpg" alt="Pokebola">
+                <p>Pokemon</p>
+            </div>
+            <div class="tipo">
+                <img src="assets/imgs/Ether.png" alt="Potion">
+                <p>Itens</p>
+            </div>
+            <div class="tipo">
+                <img src="assets/imgs/Tm.png" alt="TM">
+                <p>Ataques</p>
+            </div>
+        </div>
+      </div>
+    <!-- Fim do Tipo de Pesquisa -->
+
+    <!-- Inicio do Card de Pokemon-->
+        <div class="card-pokemons">
+            <div class="card">
+                <img src="assets/imgs/001.png">
+                <div class="id-pokemon">
+                        <p>001</p>
+                        <p>Bulbasaur</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/imgs/002.png">
+                <div class="id-pokemon">
+                        <p>002</p>
+                        <p>Ivysaur</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/imgs/003.png">
+                <div class="id-pokemon">
+                        <p>003</p>
+                        <p>Venusaur</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/imgs/004.png">
+                <div class="id-pokemon">
+                        <p>004</p>
+                        <p>Charmander</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/imgs/005.png">
+                <div class="id-pokemon">
+                        <p>005</p>
+                        <p>Charmeleon</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/imgs/006.png">
+                <div class="id-pokemon">
+                        <p>006</p>
+                        <p>Charizard</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/imgs/007.png">
+                <div class="id-pokemon">
+                        <p>007</p>
+                        <p>Squirtle</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/imgs/008.png">
+                <div class="id-pokemon">
+                        <p>008</p>
+                        <p>Wartortle</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+      </main>
+    </body>
+</html>
