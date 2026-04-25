@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador 02</title>
-    <link rel="stylesheet" href="css/02simulador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/02simulador.css">
 
 </head>
 <body>
@@ -69,38 +70,38 @@
     <div class="container-pokemon">
 
         <div class="pokenon-selecionado">
-            <span>
-                Charmander
-            </span>
-            <img src="assets/imgs/Koraidon-Cell-Fundo.png" >
+            <h2>
+                Blaziken
+            </h2>
+            <img src="assets/imgs/Blaziken.png" >
         </div>
 
         <div class="container-ataques">
-
+            <h2>ATAQUES</h2>
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-fogo icon-container"><i class="fas fa-fire"></i></div>
                     <span>soco</span>
                 </div>
             </button>
 
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-draco icon-container"><i class="fas fa-dragon"></i></div>
                     <span>soco</span>
                 </div>
             </button>
 
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-bug icon-container"><i class="fas fa-bug"></i> </div>
                     <span>soco</span>
                 </div>
             </button>
 
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-mao icon-container"><i class="fas fa-hand-fist"></i></div> 
                     <span>soco</span>
                 </div>
             </button>
@@ -112,38 +113,38 @@
     <div class="container-pokemon">
         
         <div class="pokenon-selecionado">
-            <span>
-                Charmander
-            </span>
-            <img src="assets/imgs/Miraidon-Cell-Fundo.png" >
+            <h2>
+                Electabuzz
+            </h2>
+            <img src="assets/imgs/pokemon_Electabuzz.png" >
         </div>
 
         <div class="container-ataques">
-
+            <h2>ATAQUES</h2>
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-eletric icon-container"><i class="fa-solid fa-bolt"></i></div>
                     <span>soco</span>
                 </div>
             </button>
 
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-draco icon-container"><i class="fas fa-dragon"></i></div>
                     <span>soco</span>
                 </div>
             </button>
 
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-eletric icon-container"><i class="fa-solid fa-bolt"></i> </div>
                     <span>soco</span>
                 </div>
             </button>
 
             <button class="ataques-btn">
                 <div class="ataques">
-                    <img src="assets/imgs/pokebolaIcon03.png-Photoroom.png" alt="">
+                    <div class="icon-engrenagem icon-container"><i class="fa-solid fa-gear"></i></div> 
                     <span>soco</span>
                 </div>
             </button>
@@ -155,16 +156,41 @@
 
 
 
-    <div class="container-detalhe-simulacao">
-        <div >
-            Detalhes Simulação
-        </div>
+<div class="detalhes-wrapper">
 
-        <div>
-            Detalhes Simulação 2
-        </div>
+    <div class="card-detalhes">
+        <h2>DETALHES DA SIMULAÇÃO</h2>
 
+        <div class="conteudo-detalhes">
+            <p class="turno">Turno 1</p>
+
+            <p>Dano Causado: <strong class="verde">X</strong> (Blaziken)</p>
+            <p class="critico laranja">Crítico!</p>
+
+            <p>Dano Causado: <strong class="verde">X</strong> (Electabuzz)</p>
+            <p><strong>Crítico!</strong> Dano no: <strong>Blaziken</strong></p>
+
+            <p>Dano Causado: <strong class="laranja">X</strong> Fogo!!</p>
+        </div>
     </div>
+
+    <div class="card-detalhes">
+        <h2>DETALHES DA SIMULAÇÃO</h2>
+
+        <div class="conteudo-detalhes">
+            <p class="turno">Turno 1</p>
+
+            <p>Dano Causado: <strong class="verde">X</strong> (Blaziken)</p>
+            <p class="critico laranja">Crítico!</p>
+
+            <p>Dano Causado: <strong class="laranja">X</strong> (Blaziken)</p>
+            <p><strong>Crítico!</strong> Dano no: <strong>Electabuzz</strong></p>
+
+            <p>Dano Causado: <strong class="amarelo">X</strong>, Electro </p>
+        </div>
+    </div>
+
+</div>
 
 
 
