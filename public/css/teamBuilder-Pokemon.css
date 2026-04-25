@@ -2,6 +2,8 @@ body, html{
 
     overflow-y: hidden;
     background: linear-gradient(233deg, #fae3ff 19.26%, #e2e7fb 100%);
+    width: 100%;
+    height: 100%;
 
 }
 
@@ -165,14 +167,16 @@ body, html{
 
     display: grid;
     grid-template-areas: "img detalhe golpes"
-    "status status golpes";
+    "status status status";
     grid-template-columns: .75fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
     grid-area: Pokemon;
     justify-self: center;
     width: 95%;
     height: 100%;
     background-color: #fff;
     padding: 1%;
+    border: solid 2px #D7D5DF;
     border-radius: 10px;
     gap: 2%;
 
@@ -239,9 +243,10 @@ body, html{
     display: grid;
     grid-template-areas: "icon nome mais";
     grid-template-columns: .5fr 1fr .5fr;
+    align-items: center;
     gap: 5%;
-    background-color: #f3f3f3;
-    width: 80%;
+    background-color: #fafafa;
+    width: 100%;
     padding: 2% 5%;
     border-radius: 10px;
     font-weight: 600;
@@ -277,8 +282,9 @@ body, html{
     grid-template-columns: .5fr 1fr .5fr;
     align-items: center;
     gap: 5%;
-    background-color: #f3f3f3;
-    width: 80%;
+    background-color: #fafafa;
+    width: 100%;
+    height: 60%;
     padding: 2% 5%;
     border-radius: 10px;
     font-weight: 600;
@@ -287,8 +293,187 @@ body, html{
 }
 
 .cardHabilidade img {
-
     width: 50%;
     justify-self: center;
 
+}
+
+.containerGolpes{
+
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+}
+
+.containerGolpes h3{
+    display: flex;
+    width: 100%;
+    padding: 0 10%;
+    
+}
+
+.containerGolpes ul{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.ataques{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 15%;
+    margin-top: 5%;
+    border: solid 1px #D7D5DF;
+    border-radius: 10px;
+    background-color: #fafafa;
+    padding: 1% 5%;
+    
+}
+
+.ataques img{
+
+    height: 80%;
+    width: 10%;
+
+}
+
+.containerStatus {
+    grid-area: status;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 3%;
+    width: 100%;
+    height: 95%;
+    padding: 2%;
+    border-radius: 16px;
+    background-color: #fbf9ff;
+    border: solid 1px #D7D5DF;
+}
+
+.statusBase,
+.statusEdit {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.statusBase h3,
+.statusEdit h3 {
+    color: #2f2d4f;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.statusGridBase {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 8%;
+}
+
+.statusLinha {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    align-items: center;
+    background-color: #f5f3fa;
+    border: solid 1px #D7D5DF;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #3a385f;
+}
+
+.statusLinha span {
+    display: flex;
+    border-right: solid 1px #D7D5DF;
+    font-size: 2vh;
+    justify-content: center;
+}
+
+.statusLinha strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+.statusGridEdit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    gap: 8%;
+}
+
+.statusControle {
+    display: grid;
+    grid-template-columns: 1fr .35fr .45fr .35fr;
+    align-items: center;
+    background-color: #f5f3fa;
+    border: solid 1px #D7D5DF;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #3a385f;
+}
+
+.statusControle span {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: solid 1px #D7D5DF;
+}
+
+.statusControle strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #fafafa;
+    text-align: center;
+    font-weight: 600;
+}
+
+.statusControle button {
+    height: 100%;
+    border: none;
+    background-color: #f1eff8;
+    color: #7760AE;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-left: solid 1px #D7D5DF;
+    border-right: solid 1px #D7D5DF;
+}
+
+.statusControle button:hover {
+    background-color: #e7e0f5;
+}
+
+.statusRestante {
+    align-self: center;
+    margin-top: auto;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.statusRestante strong {
+    color: #7760AE;
 }

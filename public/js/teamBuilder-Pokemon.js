@@ -31,3 +31,51 @@ function ConstruirCardSelectd(){
     containerSelected.innerHTML += time;
 
 }
+
+const statusPokemon = {
+    hp: 0,
+    ataque: 0,
+    defesa: 0,
+    ataqueEsp: 0,
+    defesaEsp: 0,
+    velocidade: 0
+};
+
+const limitePontos = 508;
+const limitePorStatus = 252;
+
+function alterarStatus(status, valor) {
+    const totalAtual = calcularTotalStatus();
+    const valorAtual = statusPokemon[status];
+
+    if (valor > 0) {
+        if (totalAtual >= limitePontos) return;
+        if (valorAtual >= limitePorStatus) return;
+
+        statusPokemon[status]++;
+    }
+
+    if (valor < 0) {
+        if (valorAtual <= 0) return;
+
+        statusPokemon[status]--;
+    }
+
+    atualizarStatusTela();
+}
+
+function calcularTotalStatus() {
+    return Object.values(statusPokemon).reduce((total, valor) => total + valor, 0);
+}
+
+function atualizarStatusTela() {
+    document.getElementById("hp").innerText = statusPokemon.hp;
+    document.getElementById("ataque").innerText = statusPokemon.ataque;
+    document.getElementById("defesa").innerText = statusPokemon.defesa;
+    document.getElementById("ataqueEsp").innerText = statusPokemon.ataqueEsp;
+    document.getElementById("defesaEsp").innerText = statusPokemon.defesaEsp;
+    document.getElementById("velocidade").innerText = statusPokemon.velocidade;
+
+    const pontosRestantes = limitePontos - calcularTotalStatus();
+    document.getElementById("pontosRestantes").innerText = pontosRestantes;
+}
