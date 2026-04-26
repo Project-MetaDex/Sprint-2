@@ -1,0 +1,139 @@
+/* Inicio do CSS Container de Pesquisa */
+body{
+    background: linear-gradient(233deg, #fae3ff 19.26%, #e2e7fb 100%);
+}
+
+.elementos-pesquisa{
+    display: flex;
+    align-items: start;
+    padding-top: 80px;
+    padding-left: 40px;
+    gap: 15px;
+}
+
+.elementos-pesquisa input{
+    display: flex;
+    justify-content: start;
+    background-color: antiquewhite;
+    padding-left: 15px;
+    width: 400px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+.barra-pesquisa input{
+    width: 400px;;
+}
+
+.filtro{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.filtro img{
+    display: flex;
+    max-width: 50%;
+    height: auto;
+}
+
+.filtro:hover{
+
+    transform: scale(1.05);
+}
+
+/* Fim do CSS Container de Pesquisa */
+
+.espacamento {
+    padding: 0 60px;
+}
+
+.tipo-pesquisa{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 15px;
+    gap: 5px;
+    margin-top: 15px;
+    border-bottom: 2px solid black;
+}
+
+.tipo-pesquisa img{
+    display: flex;
+    margin-top: 0px;
+    max-width: 20%;
+    height: auto;
+}
+
+.tipo{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+    border: 2px solid black;
+    border-bottom-style: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tipo:hover{
+    background-color: #D84B36;
+    transform: scale(1.04);
+}
+
+/* Inicio do CSS  Card Pokemons*/
+
+.card-pokemons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 40px 60px;
+    }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 2.5px solid #c6b888;
+
+    height: 300px;
+    border-radius: 25px;
+}
+
+.card img{
+    width: 95%;
+    height: 60%; 
+    object-fit: contain; 
+    background-color: #fbe9ab;
+
+    margin-top: 8px;
+    margin-right: 17px;
+    margin-left: 17px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card:hover{
+    transform: scale(1.04);
+}
+
+.id-pokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 100%;
+    height: 100px;
+    gap: 15px;
+}
+
+/*
