@@ -49,8 +49,8 @@ body{
     flex-direction: column;
     box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.50);
     background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
