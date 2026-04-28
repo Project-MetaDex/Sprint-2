@@ -63,10 +63,12 @@
       </div>
     </div>
 
-    <div class="graficos">Gráficos</div>
+    <div class="graficos">
+      <canvas id="myChart"></canvas>
+    </div>
 
     <div class="lista-times">
-      <h1>Times:</h1>
+      <h2>Times:</h2>
       <div class="container-times">
         <div class="time">Time 1
           <button>
@@ -101,6 +103,27 @@
 </body>
 
 </html>
-<script>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Gleison', 'Cintia', 'Lucas', 'Josué', 'João', 'Vitória'],
+      datasets: [{
+        label: 'Desempenho dos Alunos',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
 </script>

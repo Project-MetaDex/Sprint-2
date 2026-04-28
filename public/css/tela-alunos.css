@@ -73,7 +73,7 @@ body {
 #DashGeral {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr 2.3fr;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 2.7fr);
     height: 100%;
     gap: 30px;
     padding: 10px;
@@ -82,7 +82,7 @@ body {
 .kpi-grande {
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     height: 100%;
     padding: 0px 10px;
@@ -93,10 +93,25 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #edf2f7;
     border-radius: 15px;
+    border-top: 3px solid #8956B9;
+    padding: 20px;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+}
+
+.card-info h4 {
+    text-transform: uppercase;
+    color: #b0b0b0;
+    font-weight: 450;
+    align-self: flex-start;
+}
+
+.card-info strong {
+    font-size: 40px;
+    font-weight: 500;
 }
 
 .grafico {
@@ -107,25 +122,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 25px;
 }
 
 .kpi-pequena {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.kpi {
     background-color: #FFFFFF;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #edf2f7;
     border-radius: 15px;
+    padding: 15px;
+    
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
+
 }
+
+.kpi-pequena h3 {
+    color: #b0b0b0;
+    font-weight: 500;
+}
+
+.card-alunoRisco {
+    height: 25%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
 /* FIM ABA DASHBOARD */
+
 
 /* INICIO ABA LISTA ALUNOS */
 
@@ -134,7 +159,7 @@ body {
     
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(0, 1fr));
     gap: 25px;
 }
 
@@ -145,7 +170,7 @@ body {
     border-radius: 15px;
     border: 1px solid #e0e0e0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
+    
     display: grid;
     grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr;
     align-items: center;
@@ -154,11 +179,18 @@ body {
     transition: 0.5s;
 }
 
+
+.info-aluno:hover {
+    transition: 0.5s;
+    border: 0.5px solid #A37ACC;
+    box-shadow: 0 2px 3px #A37ACC;
+}
+
 .imagem-perfil {
     background-color: #e2e1e1;
     border: 4px solid #A37ACC;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 80px;
+    height: 80%;
     aspect-ratio: 1 / 1;
 
     display: flex;
@@ -183,17 +215,17 @@ body {
     justify-content: space-between;
 }
 
+.nome small {
+    font-size: 1.2vw; /*15px*/
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
 .nome strong {
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 18px;
+    font-size: 1.35vw; /* 18px */
     align-self: flex-end;
-}
-
-.nome small {
-    font-size: 15px;
-    color: #b0b0b0;
-    font-weight: 400;
 }
 
 .tx-vitoria {

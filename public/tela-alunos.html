@@ -58,18 +58,40 @@
       <div class="content" id="DashGeral">
 
         <div class="kpi-grande">
-          <div class="card-info">Métrica 1</div>
-          <div class="card-info">Métrica 2</div>
-          <div class="card-info">Métrica 3</div>
+          <div class="card-info">
+            <h4>Win Rate Médio</h4>
+              <strong class="valor">72%</strong>
+              <!-- <span>Média geral da turma</span> -->
+          </div>
+          <div class="card-info">
+            <h4>Batalhas Totais</h4>
+              <strong class="valor">642</strong>
+          </div>
+          <div class="card-info">
+            <h4>Taxa de Abandono</h4>
+              <strong class="valor">12%</strong>
+          </div>
+          <div class="card-info">
+            <h4>Alunos em Risco</h4>
+              <strong class="valor">3</strong>
+          </div>
         </div>
 
-        <div class="grafico">Gráficos</div>
+        <div class="grafico">
+          
+          <canvas id="myChart"></canvas>
+        </div>
 
         <div class="kpi-pequena">
+          <h3>Alunos em risco</h2>
+          <div class="card-alunoRisco">
+            
+          </div>
+
+          <!-- <div class="kpi">KPI</div>
           <div class="kpi">KPI</div>
           <div class="kpi">KPI</div>
-          <div class="kpi">KPI</div>
-          <div class="kpi">KPI</div>
+          <div class="kpi">KPI</div> -->
         </div>
 
       </div>
@@ -100,7 +122,7 @@
           </div>
           <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
-        
+
         <div class="info-aluno">
           <div class="imagem-perfil">
             <img src="./assets/icon/Logo-Nav.svg" alt="">
@@ -123,7 +145,7 @@
           </div>
           <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
-        
+
         <div class="info-aluno">
           <div class="imagem-perfil">
             <img src="./assets/icon/Logo-Nav.svg" alt="">
@@ -138,7 +160,7 @@
           </div>
           <div class="qtd-pontos">
             <small>Quantidade de Pontos</small>
-            <strong>83 pts</strong> 
+            <strong>83 pts</strong>
           </div>
           <div class="qtd-camp">
             <small>Quantidade de Campeonatos</small>
@@ -146,7 +168,7 @@
           </div>
           <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
-        
+
         <div class="info-aluno">
           <div class="imagem-perfil">
             <img src="./assets/icon/Logo-Nav.svg" alt="">
@@ -161,7 +183,7 @@
           </div>
           <div class="qtd-pontos">
             <small>Quantidade de Pontos</small>
-            <strong>57 pts</strong> 
+            <strong>57 pts</strong>
           </div>
           <div class="qtd-camp">
             <small>Quantidade de Campeonatos</small>
@@ -169,7 +191,7 @@
           </div>
           <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
         </div>
-        
+
       </div>
       <!-- FIM CONTEUDO ABA - LISTA DE ALUNOS -->
 
@@ -177,28 +199,86 @@
   </div>
 
 </body>
+
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Nov', 'Dez', 'Jan', 'Fev', 'Mar', 'Abr'],
+      datasets: [
+        {
+          label: 'Gleison',
+          data: [72, 74, 79, 80, 83, 85],
+          borderColor: '#7C5CBF',
+          backgroundColor: 'rgba(124,92,191,0.08)',
+          borderWidth: 2, pointRadius: 4, fill: true, tension: 0.4
+        },
+        {
+          label: 'João',
+          data: [85, 88, 90, 91, 93, 95],
+          borderColor: '#1D9E75',
+          backgroundColor: 'rgba(29,158,117,0.08)',
+          borderWidth: 2, pointRadius: 4, fill: true, tension: 0.4
+        },
+        {
+          label: 'Lucas',
+          data: [60, 65, 68, 70, 73, 75],
+          borderColor: '#378ADD',
+          backgroundColor: 'rgba(55,138,221,0.08)',
+          borderWidth: 2, pointRadius: 4, fill: true, tension: 0.4
+        },
+        {
+          label: 'Cintia',
+          data: [55, 60, 58, 65, 62, 63],
+          borderColor: '#BA7517',
+          backgroundColor: 'rgba(186,117,23,0.08)',
+          borderWidth: 2, pointRadius: 4, fill: true, tension: 0.4
+        }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { boxWidth: 10, padding: 16, font: { size: 12 } }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: false, min: 40, max: 100
+        }
+      }
+    }
+  });
+</script>
+
 <script>
 
   function trocarAba(idDaAba, elementoClicado) {
-    // --- PARTE 1: CONTEÚDO (O que você já fez) ---
+    
     document.querySelectorAll('.content').forEach(aba => {
-        aba.classList.add('hidden');
+      aba.classList.add('hidden');
     });
     document.getElementById(idDaAba).classList.remove('hidden');
 
-    // --- PARTE 2: BOTÕES (A novidade) ---
-    // 1. Tira o 'active' de TODOS os botões
     document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
+      btn.classList.remove('active');
     });
 
-    // 2. Adiciona 'active' apenas no botão que foi clicado
     elementoClicado.classList.add('active');
   }
 
+  
   function irParaAluno() {
     window.location.href = "tela-aluno.html";
   }
+
+
 
 </script>

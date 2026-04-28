@@ -11,8 +11,8 @@ body {
 
 .container-perfil {
     display: grid;
-    grid-template-columns: 1fr 1.25fr 1.75fr;
-    grid-template-rows: 0.9fr 1.25fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) 1.75fr;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1.25fr);
     gap: 25px;
     padding: 30px 50px;
     margin-top: 9vh;
@@ -57,11 +57,12 @@ body {
     grid-row: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    gap: clamp(8px, 5cqi, 15px); /*20px*/
 }
 
 .dados-aluno strong {
-    font-size: 20px;
+    font-size: clamp(18px, 1.5vw, 24px); /*20px*/
     letter-spacing: 4px;
     text-transform: uppercase;
 }
@@ -72,11 +73,12 @@ body {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 15px; /*15px */
 }
 
 .infos span {
     align-self: center;
+    font-size: clamp(14px, 2vw, 18px); /*16px*/
 }
 
 
@@ -89,6 +91,10 @@ body {
 
     grid-column: 1 / span 2;
     grid-row: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lista-times {
@@ -107,9 +113,10 @@ body {
     height: 100%;
 }
 
-.lista-times h1 {
+.lista-times h2 {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    font-size: 30px;
+    color: #b0b0b0;
+    font-weight: 500;
 }
 
 .container-times {
@@ -125,7 +132,6 @@ body {
     border-radius: 8px;
     padding: 0 20px;
     max-height: 100px;
-    height: fit-content;
     flex: 1;
     display: flex;
     align-items: center;
