@@ -1,230 +1,134 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Metadex | Pokedex</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="./js/sessao.js"></script>
+    <title>Pokedex</title>
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/LandingPage.css">
-  <link rel="stylesheet" href="css/pokedex.css">
-  <script src="js/sideBar.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pokedex.css">
+
 </head>
 
-<body>
-
-  <main class="Container">
+<body onload="SelecionarAba(0)">
 
     <!-- Inicio Navbar -->
 
     <nav class="Nav-Container">
 
-      <img onclick="Side('Open')" id="options" src="assets/icon/Icon-Hanburguer.svg" alt="">
-      <img id="logo" src="./assets/icon/Logo-Nav.svg" alt="">
+        <img onclick="Side('Open')" id="options" src="./assets/icon/Icon-Hanburguer.svg" alt="">
+        <img id="logo" src="./assets/icon/Logo-Nav.svg" alt="">
 
-      <ul class="Nav-Options">
-        <li><a href="index.html">Home</a></li>
-        <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Pokedex</a></li> 
-        <li><a href="cadastro.html">Ranks</a></li>
-        <li><a href="cadastro.html">Team Buider</a></li>
-        <li><a href="cadastro.html">Battle Simulator</a></li>
-      </ul>
+        <ul class="Nav-Options">
+            <li class="Selected"><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Home</a></li>
+            <li><a href="pokedex.html">Pokedex</a></li>
+            <li><a href="cadastro.html">Ranks</a></li>
+            <li><a href="cadastro.html">Team Buider</a></li>
+            <li><a href="cadastro.html">Battle Simulator</a></li>
+        </ul>
 
-      <div class="Button-Container">
-        <button class="Button-Nav Cadastro" onclick="window.location.href='./cadastro.html'" >Cadastre-se</button>
-        <button class="Button-Nav Login" onclick="window.location.href='./login.html'" >Entrar</button>
-      </div>
+        <div class="Button-Container">
+            <button class="Button-Nav Cadastro" onclick="window.location.href='./cadastro.html'">Cadastre-se</button>
+            <button class="Button-Nav Login" onclick="window.location.href='./login.html'">Entrar</button>
+        </div>
     </nav>
 
     <aside style="display: none;" class="Side-Container">
-      
-      <button onclick="Side('Close')"><img id="Close-Side" src="assets/icon/Icon-Close.svg" alt=""></button>
 
-      <div class="Side-Flex">
-        <div class="Perfil">
+        <button onclick="Side('Close')"><img id="Close-Side" src="assets/icon/Icon-Close.svg" alt=""></button>
 
-          <img src="assets/icon/Icon-User.svg" alt="">
-          <button class="Button-Side Login-Side" onclick="window.location.href='./login.html'" >Entrar</button>
+        <div class="Side-Flex">
+            <div class="Perfil">
 
+                <img src="assets/icon/Icon-User.svg" alt="">
+                <button class="Button-Side Login-Side" onclick="window.location.href='./login.html'">Entrar</button>
+
+            </div>
+
+            <ul class="Side-Options">
+                <li class="Selected"><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Home</a></li>
+                <li><a href="cadastro.html">Pokedex</a></li>
+                <li><a href="cadastro.html">Ranks</a></li>
+                <li><a href="cadastro.html">Team Buider</a></li>
+                <li><a href="cadastro.html">Battle Simulator</a></li>
+            </ul>
+
+            <img class="Side-Logo" src="./assets/icon/Logo-Nav.svg" alt="">
         </div>
-
-        <ul class="Side-Options">
-          <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Home</a></li> 
-          <li><a href="cadastro.html">Pokedex</a></li>
-          <li><a href="cadastro.html">Ranks</a></li>
-          <li><a href="cadastro.html">Team Buider</a></li>
-          <li><a href="cadastro.html">Battle Simulator</a></li>
-        </ul>
-
-        <img class="Side-Logo" src="./assets/icon/Logo-Nav.svg" alt="">
-      </div>
     </aside>
 
     <!-- Fim Navbar -->
 
-    <!-- Container de Pesquisa -->
-     <div class="background">
-        <div class="elementos-pesquisa">
-            <input type="text" name="" placeholder="Pesquisar">
+    <!-- inicio pokedex -->
 
-            <div class="filtro">   
-                <img src="assets/icon/Tipos/Agua.jpeg" alt="Filtro">
-            </div>
+    <div class="container">
 
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Fogo.jpeg" alt="Filtro">
-            </div>
+        <div class="containerPesquisa">
+            <input type="text" id="barraPesquisa" placeholder="Pesquisar">
 
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Planta.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Fantasma.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Lutador.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Fada.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Normal.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Aco.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Dragao.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Escuridao.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Inseto.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Gelo.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Pedra.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Raio.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Terra.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Veneno.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Voador.jpeg" alt="Filtro">
-            </div>
-
-            <div class="filtro">
-                <img src="assets/icon/Tipos/Psiquico.jpeg" alt="Filtro">
-            </div>
-        </div>
-    <!-- Fim do Container de Pesquisa -->
-
-    <!-- Tipo de Pesquisa -->
-      <div class="espacamento">
-        <div class="tipo-pesquisa">
-            <div class="tipo">
-                <img src="assets/imgs/Pokedex.jpg" alt="Pokebola">
-                <p>Pokemon</p>
-            </div>
-            <div class="tipo">
-                <img src="assets/imgs/Ether.png" alt="Potion">
-                <p>Itens</p>
-            </div>
-            <div class="tipo">
-                <img src="assets/imgs/Tm.png" alt="TM">
-                <p>Ataques</p>
-            </div>
-        </div>
-      </div>
-    <!-- Fim do Tipo de Pesquisa -->
-
-    <!-- Inicio do Card de Pokemon-->
-        <div class="card-pokemons">
-            <div class="card">
-                <img src="assets/imgs/001.png">
-                <div class="id-pokemon">
-                        <p>001</p>
-                        <p>Bulbasaur</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/imgs/002.png">
-                <div class="id-pokemon">
-                        <p>002</p>
-                        <p>Ivysaur</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/imgs/003.png">
-                <div class="id-pokemon">
-                        <p>003</p>
-                        <p>Venusaur</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/imgs/004.png">
-                <div class="id-pokemon">
-                        <p>004</p>
-                        <p>Charmander</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/imgs/005.png">
-                <div class="id-pokemon">
-                        <p>005</p>
-                        <p>Charmeleon</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/imgs/006.png">
-                <div class="id-pokemon">
-                        <p>006</p>
-                        <p>Charizard</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/imgs/007.png">
-                <div class="id-pokemon">
-                        <p>007</p>
-                        <p>Squirtle</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/imgs/008.png">
-                <div class="id-pokemon">
-                        <p>008</p>
-                        <p>Wartortle</p>
-                </div>
+            <div class="containerFilter">
+                <samp>
+                    < </samp>
+                        <ul class="filter">
+                            <li><button class="btnFilter" id="water" onclick="Filter('water')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Agua.svg" alt="Água"></button></li>
+                            <li><button class="btnFilter" id="dragon" onclick="Filter('dragon')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Dragão.svg" alt="Dragão"></button></li>
+                            <li><button class="btnFilter" id="electric" onclick="Filter('electric')"><img
+                                        class="imgTipo" src="assets/icon/tipo/Eletrico.svg" alt="Elétrico"></button>
+                            </li>
+                            <li><button class="btnFilter" id="fairy" onclick="Filter('fairy')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Fada.svg" alt="Fada"></button></li>
+                            <li><button class="btnFilter" id="ghost" onclick="Filter('ghost')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Fantasma.svg" alt="Fantasma"></button></li>
+                            <li><button class="btnFilter" id="fire" onclick="Filter('fire')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Fogo.svg" alt="Fogo"></button></li>
+                            <li><button class="btnFilter" id="ice" onclick="Filter('ice')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Gelo.svg" alt="Gelo"></button></li>
+                            <li><button class="btnFilter" id="grass" onclick="Filter('grass')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Grama.svg" alt="Grama"></button></li>
+                            <li><button class="btnFilter" id="bug" onclick="Filter('bug')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Inseto.svg" alt="Inseto"></button></li>
+                            <li><button class="btnFilter" id="fighting" onclick="Filter('fighting')"><img
+                                        class="imgTipo" src="assets/icon/tipo/Lutador.svg" alt="Lutador"></button></li>
+                            <li><button class="btnFilter" id="steel" onclick="Filter('steel')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Metal.svg" alt="Metal"></button></li>
+                            <li><button class="btnFilter" id="normal" onclick="Filter('normal')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Normal.svg" alt="Normal"></button></li>
+                            <li><button class="btnFilter" id="dark" onclick="Filter('dark')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Noturno.svg" alt="Noturno"></button></li>
+                            <li><button class="btnFilter" id="rock" onclick="Filter('rock')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Pedra.svg" alt="Pedra"></button></li>
+                            <li><button class="btnFilter" id="psychic" onclick="Filter('psychic')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Psiquico.svg" alt="Psíquico"></button></li>
+                            <li><button class="btnFilter" id="ground" onclick="Filter('ground')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Terra.svg" alt="Terra"></button></li>
+                            <li><button class="btnFilter" id="poison" onclick="Filter('poison')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Veneno.svg" alt="Veneno"></button></li>
+                            <li><button class="btnFilter" id="flying" onclick="Filter('flying')"><img class="imgTipo"
+                                        src="assets/icon/tipo/Voador.svg" alt="Voador"></button></li>
+                        </ul>
+                        <span>></span>
             </div>
         </div>
 
+        <div class="containerPokemonList">
+            <div class="containerAbas">
+                <button id="aba0" onclick="SelecionarAba(0)" class="primeira Aba">Pokémon</button>
+                <button id="aba1" onclick="SelecionarAba(1)" class="ultima Aba">Items</button>
+            </div>
+            <hr class="line">
+
+            <div class="containerCard">
+                
+            </div>
         </div>
-      </main>
-    </body>
+
+    </div>
+
+    <script src="js/pokedex.js"></script>
+</body>
+
 </html>
