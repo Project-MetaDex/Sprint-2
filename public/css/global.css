@@ -107,6 +107,14 @@ html, body{
 
 }
 
+.Nav-Container li a {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .Nav-Options li a:hover {
 
     color: #ffffff;
