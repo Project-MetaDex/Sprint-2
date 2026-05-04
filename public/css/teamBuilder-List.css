@@ -44,7 +44,7 @@ body, html{
 #barraPesquisa {
 
     width: 30%;
-    border: solid 2px #D7D5DF;
+    border: solid 2px #7760AE;
     border-radius: 20px;
     background-color: #F3F2F6;
     padding: 0.5% 2%;
@@ -54,7 +54,7 @@ body, html{
 
 #barraPesquisa::placeholder {
 
-    color: #D7D5DF;
+    color: #7760AE;
     font-weight: 500;
 
 }
