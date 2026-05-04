@@ -171,3 +171,78 @@ html, body{
 }
 
 /* Fim Navbar css */
+
+/* Inicio tipos */
+
+.steel {
+    background-color: #b7b7ce;
+}
+
+.water {
+    background-color: #6390f0;
+}
+
+.dragon {
+    background-color: #6f35fc;
+}
+
+.electric {
+    background-color: #f7d02c;
+}
+
+.fairy {
+    background-color: #d685ad;
+}
+
+.ghost {
+    background-color: #735797;
+}
+
+.fire {
+    background-color: #ee8130;
+}
+
+.ice {
+    background-color: #96d9d6;
+}
+
+.bug {
+    background-color: #a6b91a;
+}
+
+.fighting {
+    background-color: #c22e28;
+}
+
+.normal {
+    background-color: #a8a77a;
+}
+
+.rock {
+    background-color: #b6a136;
+}
+
+.grass {
+    background-color: #7ac74c;
+}
+
+.psychic {
+    background-color: #f95587;
+}
+
+.dark {
+    background-color: #705746;
+}
+
+.ground {
+    background-color: #e2bf65;
+}
+
+.poison {
+    background-color: #a33ea1;
+}
+
+.flying {
+    background-color: #a98ff3;
+}
+
