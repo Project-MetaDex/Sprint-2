@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Metadex | Pokeinfos</title>
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/LandingPage.css">
+  <link rel="stylesheet" href="css/pokeinfos.css">
+  <script src="js/sideBar.js"></script>
+</head>
+
+<body>
+
+  <main class="Container">
+
+    <!-- Inicio Navbar -->
+
+    <nav class="Nav-Container">
+
+      <img onclick="Side('Open')" id="options" src="assets/icon/Icon-Hanburguer.svg" alt="">
+      <img id="logo" src="./assets/icon/Logo-Nav.svg" alt="">
+
+      <ul class="Nav-Options">
+        <li><a href="index.html">Home</a></li>
+        <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Pokedex</a></li> 
+        <li><a href="cadastro.html">Ranks</a></li>
+        <li><a href="cadastro.html">Team Buider</a></li>
+        <li><a href="cadastro.html">Battle Simulator</a></li>
+      </ul>
+
+      <div class="Button-Container">
+        <button class="Button-Nav Cadastro" onclick="window.location.href='./cadastro.html'" >Cadastre-se</button>
+        <button class="Button-Nav Login" onclick="window.location.href='./login.html'" >Entrar</button>
+      </div>
+    </nav>
+
+    <aside style="display: none;" class="Side-Container">
+      
+      <button onclick="Side('Close')"><img id="Close-Side" src="assets/icon/Icon-Close.svg" alt=""></button>
+
+      <div class="Side-Flex">
+        <div class="Perfil">
+
+          <img src="assets/icon/Icon-User.svg" alt="">
+          <button class="Button-Side Login-Side" onclick="window.location.href='./login.html'" >Entrar</button>
+
+        </div>
+
+        <ul class="Side-Options">
+          <li class="Selected" ><img src="./assets/icon/Icon-NavSelected.svg" alt=""><a href="#">Home</a></li> 
+          <li><a href="cadastro.html">Pokedex</a></li>
+          <li><a href="cadastro.html">Ranks</a></li>
+          <li><a href="cadastro.html">Team Buider</a></li>
+          <li><a href="cadastro.html">Battle Simulator</a></li>
+        </ul>
+
+        <img class="Side-Logo" src="./assets/icon/Logo-Nav.svg" alt="">
+      </div>
+    </aside>
+
+    <!-- Fim Navbar -->
+
+    <!-- Inicio Container1 -->
+    <div class="container1">
+      <div class="foto-pokemon">
+        <img src="assets/imgs/007.png" alt="">
+      </div>
+      <div class="info-status">
+        <div class="nome">
+          <p>Squirtle</p>
+        </div>
+        <div class="tipos">
+          <ul>
+            <li>água</li>
+          </ul>
+        </div>
+        <div class="status">
+          <ul>
+            <li>Ataque</li>
+            <li>Ataque Especial</li>
+            <li>Defesa</li>
+            <li>Defesa Especial</li>
+            <li>Vida</li>
+            <li>Velocidade</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dados">
+        <p>Dados Gerais</p>
+      </div>
+    </div>
+    <!-- Fim Container1 -->
