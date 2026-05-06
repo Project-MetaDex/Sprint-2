@@ -11,7 +11,7 @@ var times = [
                 
 
                 <div class="buttons">
-                    <button class="editar">Editar</button>
+                    <button class="editar" onclick="editarTime(0)">Editar</button>
                     <button class="excluir" onclick="excluirTime(0)"><img id="imgExcluir" src="assets/icon/Icon-Trash.svg" alt=""></button>
                 </div>
 
@@ -37,7 +37,7 @@ var times = [
                 
 
                 <div class="buttons">
-                    <button class="editar">Editar</button>
+                    <button class="editar" onclick="editarTime(1)">Editar</button>
                     <button class="excluir" onclick="excluirTime(1)"><img id="imgExcluir" src="assets/icon/Icon-Trash.svg" alt=""></button>
                 </div>
 
@@ -63,7 +63,7 @@ var times = [
                 
 
                 <div class="buttons">
-                    <button class="editar">Editar</button>
+                    <button class="editar" onclick="editarTime(2)">Editar</button>
                     <button class="excluir" onclick="excluirTime(2)"><img id="imgExcluir" src="assets/icon/Icon-Trash.svg" alt=""></button>
                 </div>
 
@@ -89,7 +89,7 @@ var times = [
                 
 
                 <div class="buttons">
-                    <button class="editar">Editar</button>
+                    <button class="editar" onclick="editarTime(3)">Editar</button>
                     <button class="excluir" onclick="excluirTime(3)"><img id="imgExcluir" src="assets/icon/Icon-Trash.svg" alt=""></button>
                 </div>
 
@@ -107,6 +107,11 @@ var times = [
 
 function listarTimes (){
 
+    const botaoNovoTime = document.getElementById("novoTime");
+    if (botaoNovoTime) {
+        botaoNovoTime.onclick = criarNovoTime;
+    }
+
     for (let i = 0; i < times.length; i++) {
         let element = times[i];
         let container = document.querySelector(".cardTimes")
@@ -115,6 +120,29 @@ function listarTimes (){
         
     }
 
+}
+
+function criarNovoTime() {
+    limparTimeSelecionado();
+    location.href = "teamBuilder-Selection.html";
+}
+
+function editarTime(index) {
+    sessionStorage.setItem("TIME_EDITANDO", String(index));
+    location.href = "teamBuilder-Selection.html";
+}
+
+function limparTimeSelecionado() {
+    const totalSalvo = Number(sessionStorage.getItem("TOTAL_POKEMONS_TIME"));
+
+    if (totalSalvo) {
+        for (let i = 0; i < totalSalvo; i++) {
+            sessionStorage.removeItem(`POKEMON${i}`);
+        }
+    }
+
+    sessionStorage.removeItem("TOTAL_POKEMONS_TIME");
+    sessionStorage.removeItem("POKEMON_EDITANDO");
 }
 
 function excluirTime (id){

@@ -5,6 +5,15 @@ var pokemonSelected = [];
 const containerSelected = document.querySelector(".containerCardSelected")
 const containerCard = document.querySelector(".containerCard")
 
+window.addEventListener("load", () => {
+    restaurarTimeSelecionado();
+
+    const botaoSalvar = document.getElementById("btnSalvar");
+    if (botaoSalvar) {
+        botaoSalvar.onclick = salvarSelecao;
+    }
+});
+
 
 function SelecionarAba(Aba){
 
@@ -116,12 +125,14 @@ function Adicionar(pokemon){
 
 function ConstruirCardSelectd(){
 
+    var time = ""
+    containerSelected.innerHTML = "";
+
     for (let i = 0; i < pokemonSelected.length; i++) {
         const element = pokemonSelected[i];
         const type1 = element.types[0].type.name
         const type2 = element.types[1] ? element.types[1].type.name : null
-        
-        var time = ""
+
         time = `
         <div id="IdPokemon${i}" class="cardSelecionado">
             <img src="${element.sprites.front_default}" alt="">
@@ -133,9 +144,9 @@ function ConstruirCardSelectd(){
             <button class="excluir" onclick="RemoverPokemon('IdPokemon${i}', ${i})"><img id="imgExcluir" src="assets/icon/Icon-Trash.svg" alt=""></button>
         </div>
         `
-    }
 
-    containerSelected.innerHTML += time;
+        containerSelected.innerHTML += time;
+    }
 
 }
 
@@ -148,13 +159,19 @@ function RemoverPokemon(pokemon, index){
 
 function EditarPokemon(index){  
 
-    sessionStorage.clear()
-
-    for (let i = 0; i < pokemonSelected.length; i++) {
-        const element = pokemonSelected[i];
-        sessionStorage.setItem(`POKEMON${i}`, JSON.stringify(element))
-    }
+    sessionStorage.setItem("POKEMON_EDITANDO", String(index));
+    persistirTimeSelecionado();
 
     location.href = "teamBuilder-Pokemon.html"
 
+}
+
+
+function salvarSelecao() {
+    if (!pokemonSelected.length) {
+        alert("Selecione pelo menos um Pokémon antes de continuar.");
+        return;
+    }
+
+    location.href = "teamBuilder-List.html"
 }

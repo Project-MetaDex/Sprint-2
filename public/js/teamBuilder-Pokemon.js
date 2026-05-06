@@ -1,14 +1,25 @@
 var pokemon = [];
+var pokemonEditandoIndex = 0;
+
+window.addEventListener("load", () => {
+    conectarNavegacao();
+    renderizarPokemonEmEdicao();
+});
 
 function ConstruirCardSelectd(){
 
     pokemon = []
     var time = ""
     const containerSelected = document.querySelector(".containerCardSelected")
+    containerSelected.innerHTML = "";
 
-    for (let i = 0; i < sessionStorage.length; i++) {
+    const totalSalvo = Number(sessionStorage.getItem("TOTAL_POKEMONS_TIME"));
+
+    for (let i = 0; i < totalSalvo; i++) {
         const element = sessionStorage.getItem(`POKEMON${i}`)
-        pokemon.push(JSON.parse(element))
+        if (element) {
+            pokemon.push(JSON.parse(element))
+        }
     }
 
     for (let i = 0; i < pokemon.length; i++) {
@@ -30,6 +41,80 @@ function ConstruirCardSelectd(){
 
     containerSelected.innerHTML += time;
 
+}
+
+function conectarNavegacao() {
+    const botaoVoltar = document.getElementById("btnVoltar");
+    const botaoSalvar = document.getElementById("btnSalvar");
+
+    if (botaoVoltar) {
+        botaoVoltar.onclick = () => {
+            location.href = "teamBuilder-Selection.html";
+        };
+    }
+
+    if (botaoSalvar) {
+        botaoSalvar.onclick = () => {
+            location.href = "teamBuilder-List.html";
+        };
+    }
+}
+
+function EditarPokemon(index) {
+    pokemonEditandoIndex = index;
+    sessionStorage.setItem("POKEMON_EDITANDO", String(index));
+    renderizarPokemonEmEdicao();
+}
+
+function renderizarPokemonEmEdicao() {
+    const indexSalvo = Number(sessionStorage.getItem("POKEMON_EDITANDO"));
+
+    if (!Number.isNaN(indexSalvo)) {
+        pokemonEditandoIndex = indexSalvo;
+    }
+
+    if (!pokemon.length) {
+        ConstruirCardSelectd();
+    }
+
+    const pokemonAtual = pokemon[pokemonEditandoIndex] || pokemon[0];
+    if (!pokemonAtual) {
+        return;
+    }
+
+    const nomePokemon = document.querySelector(".nomePokemon");
+    const imagemPokemon = document.querySelector(".imgPokemon");
+    const tipos = document.querySelectorAll(".tipos .etiqueta");
+    const statusBase = document.querySelectorAll(".statusGridBase .statusLinha strong");
+
+    if (nomePokemon) {
+        nomePokemon.textContent = pokemonAtual.name;
+    }
+
+    if (imagemPokemon) {
+        imagemPokemon.src = pokemonAtual.sprites.other?.['official-artwork']?.front_default || pokemonAtual.sprites.front_default;
+        imagemPokemon.alt = pokemonAtual.name;
+    }
+
+    if (tipos[0]) {
+        const tipoPrincipal = pokemonAtual.types[0]?.type.name || "";
+        tipos[0].textContent = tipoPrincipal;
+        tipos[0].className = `etiqueta tipo1 ${tipoPrincipal}`;
+    }
+
+    if (tipos[1]) {
+        const tipoSecundario = pokemonAtual.types[1]?.type.name || "";
+        tipos[1].textContent = tipoSecundario || "Sem tipo";
+        tipos[1].className = `etiqueta tipo2 ${tipoSecundario || 'normal'}`;
+    }
+
+    const mapaStatus = ["hp", "attack", "defense", "special-defense", "special-attack", "speed"];
+    mapaStatus.forEach((nomeStatus, index) => {
+        if (statusBase[index]) {
+            const valor = pokemonAtual.stats.find((status) => status.stat.name === nomeStatus)?.base_stat || 0;
+            statusBase[index].textContent = valor;
+        }
+    });
 }
 
 const statusPokemon = {
