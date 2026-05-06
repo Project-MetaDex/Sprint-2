@@ -11,7 +11,6 @@ public class Main {
         // ============================================
         sistema.criarUsuarioTeste("Josué Avendano", "javendano@metadex.com", "pikachu123");
         sistema.criarUsuarioTeste("Cintia Azevedo", "cazevedo@metadex.com", "water456");
-        sistema.criarUsuarioTeste("Lucas Lima", "llima@metadex.com", "rock789");
 
         // ============================================
         // Logs de sistema (sem usuário vinculado)
@@ -35,11 +34,11 @@ public class Main {
         sistema.registrarLog("Derrota registrada no campeonato", "INFO", 2);
 
         // ============================================
-        // Usuário 3  (ID 3)
+        // Leitura de dados do S3
         // ============================================
-        sistema.registrarLog("Login realizado com sucesso", "INFO", 3);
-        sistema.registrarLog("Dados do perfil atualizados", "INFO", 3);
-        sistema.registrarLog("Pokémon Onix adicionado ao time", "INFO", 3);
+        sistema.registrarLog("Iniciando leitura da base de dados no S3", "INFO");
+        sistema.registrarLog("Arquivo carregado com sucesso", "INFO");
+        sistema.registrarLog("Dados processados e armazenados no banco", "INFO");
 
         // ============================================
         // Exibindo todos os logs salvos no banco
