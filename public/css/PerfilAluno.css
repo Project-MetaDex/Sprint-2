@@ -25,7 +25,7 @@ body {
 .menu-lateral {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 40px;
 }
 
 .card-perfil {
@@ -71,7 +71,7 @@ body {
 .opcao-menu {
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 14px;
     height: 55px;
     padding: 0 18px;
     background-color: #ffffff;
@@ -110,7 +110,7 @@ body {
 }
 
 .card-sobre {
-    padding: 34px;
+    padding: 20px;
 }
 
 .texto-sobre {
@@ -181,13 +181,13 @@ body {
 
 .cards-estatisticas {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
 }
 
 .card-estatistica {
-    min-height: 230px;
-    padding: 24px 16px;
+    min-height: 175px;
+    padding: 18px 14px;
     background-color: #ffffff;
     border: 1px solid #ece8f8;
     border-radius: 18px;
@@ -196,13 +196,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 5px;
     text-align: center;
 }
 
 .circulo-icone {
-    width: 72px;
-    height: 72px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background-color: #eee8ff;
     display: flex;
@@ -211,19 +211,19 @@ body {
 }
 
 .circulo-icone span {
-    font-size: 34px;
+    font-size: 25px;
     color: #5b35c9;
 }
 
 .titulo-estatistica {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     color: #171552;
 }
 
 .numero-estatistica {
-    font-size: 36px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 700;
     color: #08093f;
     line-height: 1;
 }
@@ -232,7 +232,7 @@ body {
 .card-resumo {
     padding: 26px;
     position: relative;
-    height: 90%;
+    height: 100%;
     border-radius: 28px;
     background: linear-gradient(145deg, #c6b1fb, #eac6f0);
     box-shadow: 0 16px 36px rgba(73, 45, 132, 0.25);
@@ -241,17 +241,17 @@ body {
 .conteudo-resumo {
     display:flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 16px;
+    gap: 25px;
+    margin-top: 8%;
 
 }
 
 .item-resumo {
     display: flex;
     align-items: center;
-    gap: 14px;
-    min-height: 120px;
-    padding: 16px;
+    gap: 17px;
+    min-height: 115px;
+    padding: 14px;
     border: 1px solid #ece8f8;
     border-radius: 16px;
     background-color: #ffffff;
@@ -349,4 +349,109 @@ body {
 .icone-resumo i {
     font-size: 34px;
     color: #5b35c9;
+}
+.card-stats {
+    padding: 20px 35px;
+}
+
+.cabecalho-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.grid-info-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5%;
+    margin-top: 10px;
+}
+
+.info-stat {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 86px;
+    border-radius: 16px;
+}
+
+.icone-info-stat {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dcd4f4;
+    color: #5b35c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-info-stat i {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.rotulo-stat {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4c4375;
+}
+
+.valor-stat {
+    display: block;
+    margin-top: 2px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #08093f;
+}
+
+.cabecalho-time {
+    margin-top: 28px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.titulo-time {
+    font-size: 18px;
+    font-weight: 800;
+    color: #08093f;
+    
+}
+
+
+.time-principal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.pokemon-card {
+    min-height: 160px;
+    padding: 16px 12px;
+    background-color: #ffffff;
+    border: 1px solid #ece8f8;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(65, 45, 130, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon-card img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.pokemon-card span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #090A3D;
+    text-align: center;
 }

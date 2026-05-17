@@ -231,9 +231,8 @@
                 position: absolute;
                 display: grid; 
                 grid-template-columns: 1fr 1fr; 
-                gap: 1rem;
-                width: 90%;
-                max-width: 500px;
+                gap: 9%;
+                max-width: 460px;
                 left: 20%;
                 bottom: 18%; 
                 z-index: 10; 
@@ -242,7 +241,6 @@
             
             .input-informacoes input {
                 position: relative;
-                width: 85%; 
                 background-color: #fcf6ec;
             }
 
@@ -258,14 +256,14 @@
                 width: 80%;
                 max-width: 400px;
                 left: 24%;
-                bottom: 12%; 
+                bottom: 11%; 
                 z-index: 10;
             }
 
             .ja-tem-conta {
                 position: absolute;
                 width: 100%;
-                top: 88%;
+                top: 89%;
                 z-index: 10;
                 color: #ffffff;
                 font-size: 18px;

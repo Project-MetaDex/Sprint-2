@@ -288,12 +288,12 @@
   /* ------- LISTA DE ALUNOS COM PAGINAÇÃO ------- */
 
   const alunos = [
-    { nome: 'Gleison Freitas', winRate: 85, pontos: '92 pts', campeonatos: 6, corBarra: '#1D9E75' },
-    { nome: 'Lucas Lima', winRate: 75, pontos: '68 pts', campeonatos: 2, corBarra: '#1D9E75' },
-    { nome: 'Cintia Azevedo', winRate: 63, pontos: '83 pts', campeonatos: 4, corBarra: '#BA7517' },
-    { nome: 'João Sapia', winRate: 95, pontos: '57 pts', campeonatos: 5, corBarra: '#1D9E75' },
-    { nome: 'Josué Alvarez', winRate: 30, pontos: '21 pts', campeonatos: 0, corBarra: '#c0392b' },
-    { nome: 'Vitória Lima', winRate: 48, pontos: '38 pts', campeonatos: 1, corBarra: '#BA7517' },
+    { nome: 'Gleison Freitas', winRate: 85, pontos: '92 pts', ranking: "1°", corBarra: '#1D9E75' },
+    { nome: 'Lucas Lima', winRate: 75, pontos: '68 pts', ranking: "9°", corBarra: '#1D9E75' },
+    { nome: 'Cintia Azevedo', winRate: 63, pontos: '83 pts', ranking: "100°", corBarra: '#BA7517' },
+    { nome: 'João Sapia', winRate: 95, pontos: '57 pts', ranking: "6°", corBarra: '#1D9E75' },
+    { nome: 'Josué Alvarez', winRate: 30, pontos: '21 pts', ranking: "445°", corBarra: '#c0392b' },
+    { nome: 'Vitória Lima', winRate: 48, pontos: '38 pts', ranking: "892°", corBarra: '#BA7517' },
   ];
 
   const POR_PAGINA = 4;
@@ -333,8 +333,8 @@
           <strong>${a.pontos}</strong>
         </div>
         <div class="qtd-camp">
-          <small>Campeonatos</small>
-          <strong>${a.campeonatos}</strong>
+          <small>ranking</small>
+          <strong>${a.ranking}</strong>
         </div>
         <button class="btn-verPerfil" onclick="irParaAluno()">Ver Perfil</button>
       </div>
