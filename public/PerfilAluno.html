@@ -68,201 +68,184 @@
     <!-- Fim Navbar -->
 
     <main class="pagina-aluno">
-        <div class="conteudo-aluno">
-            <div class="menu-lateral">
-                <div class="card-perfil">
-                    <img class="imagem-perfil" src="assets/imgs/foto_perfil_aluna.png" alt="Foto da aluna" />
+        <section class="perfil-layout">
+            <aside class="perfil-sidebar">
+                <div class="perfil-card">
+                    <div class="avatar-box">
+                        <img class="imagem-perfil" src="assets/imgs/foto_perfil_aluna.png" alt="Foto da aluna" />
+                    </div>
 
-                    <span class="nome-aluno">Cíntia Miranda</span>
+                    <h1 class="nome-aluno">Cíntia Miranda</h1>
                     <span class="tipo-aluno">miranda_metagames</span>
+
+
+                    <nav class="opcoes-perfil" aria-label="Menu do perfil">
+                        <a class="opcao-menu opcao-ativa" href="#">
+                            <span class="icone-menu"><i class="bi bi-grid"></i></span>
+                            <span>Visão geral</span>
+                        </a>
+
+                        <a class="opcao-menu" href="#">
+                            <span class="icone-menu"><i class="bi bi-person"></i></span>
+                            <span>Editar perfil</span>
+                        </a>
+
+                        <a class="opcao-menu" href="tela-aluno.html">
+                            <span class="icone-menu"><i class="bi bi-graph-up-arrow"></i></span>
+                            <span>Meu progresso</span>
+                        </a>
+
+                        <a class="opcao-menu" href="#">
+                            <span class="icone-menu"><i class="bi bi-gear"></i></span>
+                            <span>Configurações</span>
+                        </a>
+
+                        <a class="opcao-menu opcao-sair" href="index.html">
+                            <span class="icone-menu"><i class="bi bi-box-arrow-left"></i></span>
+                            <span>Sair da conta</span>
+                        </a>
+                    </nav>
                 </div>
+            </aside>
 
-                <div class="opcoes-perfil">
-                    <div class="opcao-menu opcao-ativa">
-                        <span class="icone-menu">
-                            <i class="bi bi-grid"></i>
-                        </span>
-                        <span>Visão geral</span>
+            <section class="perfil-main">
+                <article class="painel-card status-card">
+                    <div class="titulo-com-icone">
+                        <img src="assets/imgs/pokebolaIcon04-Photoroom.png" width="40">
+                        <h2>Status</h2>
                     </div>
 
-                    <div class="opcao-menu">
-                        <span class="icone-menu">
-                            <i class="bi bi-person"></i>
-                        </span>
-                        <span>Editar perfil</span>
-                    </div>
+                    <div class="grid-info-stats">
+                        <div class="info-stat stat-vitorias">
+                            <span class="icone-info-stat"><i class="bi bi-trophy-fill"></i></span>
+                            <div>
+                                <span class="rotulo-stat">Total vitórias</span>
+                                <strong class="valor-stat">50</strong>
 
-                    <div class="opcao-menu">
-                        <span class="icone-menu">
-                            <i class="bi bi-graph-up-arrow"></i>
-                        </span>
-                        <span>Meu progresso</span>
-                    </div>
-
-                    <div class="opcao-menu">
-                        <span class="icone-menu">
-                            <i class="bi bi-box-arrow-left"></i>
-                        </span>
-                        <span>Logout</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="area-principal">
-    <div class="card-sobre card-stats">
-
-    <div class="cabecalho-stats">
-        <span class="titulo-card">Status</span>
-    </div>
-
-    <div class="grid-info-stats">
-
-        <div class="info-stat">
-            <span class="icone-info-stat">
-                <i class="bi bi-trophy"></i>
-            </span>
-
-            <div>
-                <span class="rotulo-stat">Total vitórias</span>
-                <span class="valor-stat">50</span>
-            </div>
-        </div>
-
-        <div class="info-stat">
-            <span class="icone-info-stat">
-                <i class="bi bi-x-circle"></i>
-            </span>
-
-            <div>
-                <span class="rotulo-stat">Total derrotas</span>
-                <span class="valor-stat">50</span>
-            </div>
-        </div>
-
-        <div class="info-stat">
-            <span class="icone-info-stat">
-                <i class="bi bi-star"></i>
-            </span>
-
-            <div>
-                <span class="rotulo-stat">Pontos</span>
-                <span class="valor-stat">500Pt</span>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="cabecalho-time">
-        <span class="titulo-time">Time principal</span>
-        
-    </div>
-
-    <div class="time-principal">
-
-        <div class="pokemon-card">
-            <img src="assets/imgs/image-Photoroom.png" alt="Pikachu">
-            <span>Pikachu</span>
-        </div>
-
-        <div class="pokemon-card">
-            <img src="assets/imgs/004.png" alt="Charmander">
-            <span>Charmander</span>
-        </div>
-
-        <div class="pokemon-card">
-            <img src="assets/imgs/001.png" alt="Bulbasaur">
-            <span>Bulbasaur</span>
-        </div>
-
-        <div class="pokemon-card">
-            <img src="assets/imgs/007.png" alt="Squirtle">
-            <span>Squirtle</span>
-        </div>
-
-    </div>
-
-</div>
-
-                <div class="cards-estatisticas">
-
-                    <div class="card-estatistica">
-                        <div class="circulo-icone">
-                            <span class="icone-info-stat">
-                                <i class="bi bi-trophy"></i>
-                            </span>
+                            </div>
                         </div>
 
-                        <span class="titulo-estatistica">Posição no ranking</span>
-                        <span class="numero-estatistica">4°</span>
-                    </div>
+                        <div class="info-stat stat-derrotas">
+                            <span class="icone-info-stat"><i class="bi bi-x-circle"></i></span>
+                            <div>
+                                <span class="rotulo-stat">Total derrotas</span>
+                                <strong class="valor-stat">50</strong>
 
-                    <div class="card-estatistica">
-                        <div class="circulo-icone">
-                            <span class="icone-estatistica">
-                                <i class="bi bi-bookmark"></i>
-                            </span>
+                            </div>
                         </div>
 
-                        <span class="titulo-estatistica">Times salvos</span>
-                        <span class="numero-estatistica">6</span>
+                        <div class="info-stat stat-pontos">
+                            <span class="icone-info-stat"><i class="bi bi-star"></i></span>
+                            <div>
+                                <span class="rotulo-stat">Pontos</span>
+                                <strong class="valor-stat">500Pt</strong>
+                            </div>
+                        </div>
                     </div>
+                </article>
 
-                    <div class="card-estatistica">
-                        <div class="circulo-icone">
-                            <span class="icone-estatistica">
-                                <i class="bi bi-bar-chart"></i>
-                            </span>
+                <article class="painel-card time-card">
+                    <div class="cabecalho-card">
+                        <div class="titulo-com-icone titulo-menor">
+                            <span class="icone-titulo"><i class="bi bi-controller"></i></span>
+                            <h2>Meu time principal</h2>
                         </div>
 
-                        <span class="titulo-estatistica">Partidas analisadas</span>
-                        <span class="numero-estatistica">43</span>
+                        <button class="botao-gerenciar">
+                            <i class="bi bi-pencil"></i>
+                            Gerenciar time
+                        </button>
                     </div>
-                </div>
-            </div>
 
-            <div class="card-resumo">
-                <span class="titulo-card">Resumo do aluno</span>
+                    <div class="time-principal">
+                        <div class="pokemon-card tipo-eletrico">
+                            <img src="assets/imgs/image-Photoroom.png" alt="Pikachu" />
+                            <strong>Pikachu</strong>
+                            <span><i class="bi bi-lightning-fill"></i> Elétrico</span>
+                        </div>
 
-                <div class="conteudo-resumo">
-                    <div class="item-resumo">
-                        <span class="icone-resumo">
-                            <i class="bi bi-bullseye"></i>
-                        </span>
+                        <div class="pokemon-card tipo-fogo">
+                            <img src="assets/imgs/004.png" alt="Charmander" />
+                            <strong>Charmander</strong>
+                            <span><i class="bi bi-fire"></i> Fogo</span>
+                        </div>
 
-                        <div class="texto-resumo">
-                            <span class="titulo-resumo">Objetivo atual</span>
-                            <span class="descricao-resumo">
-                                Melhorar leitura de board e posicionamento.
-                            </span>
+                        <div class="pokemon-card tipo-planta">
+                            <img src="assets/imgs/001.png" alt="Bulbasaur" />
+                            <strong>Bulbasaur</strong>
+                            <span><i class="bi bi-leaf-fill"></i> Planta</span>
+                        </div>
+
+                        <div class="pokemon-card tipo-agua">
+                            <img src="assets/imgs/007.png" alt="Squirtle" />
+                            <strong>Squirtle</strong>
+                            <span><i class="bi bi-droplet-fill"></i> Água</span>
+                        </div>
+                    </div>
+                </article>
+
+                <section class="painel-card metricas-card" aria-label="Métricas do aluno">
+                    <div class="metrica-item metrica-ranking">
+                        <span class="circulo-icone"><i class="bi bi-award"></i></span>
+                        <div>
+                            <span class="titulo-estatistica">Posição no ranking</span>
+                            <strong class="numero-estatistica">4°</strong>
                         </div>
                     </div>
 
-                    <div class="item-resumo">
-                        <span class="icone-resumo">
-                            <i class="bi bi-lightbulb"></i>
-                        </span>
+                    <div class="metrica-item metrica-times">
+                        <span class="circulo-icone"><i class="bi bi-shield-check"></i></span>
+                        <div>
+                            <span class="titulo-estatistica">Times salvos</span>
+                            <strong class="numero-estatistica">6</strong>
 
-                        <div class="texto-resumo">
-                            <span class="titulo-resumo">Foco de estudo</span>
-                            <span class="descricao-resumo">
-                                Speed control, matchups e construção de times.
-                            </span>
                         </div>
                     </div>
 
-                    <div class="item-resumo">
-                        <span class="icone-resumo">
-                            <i class="bi bi-clock"></i>
-                        </span>
+                    <div class="metrica-item metrica-partidas">
+                        <span class="circulo-icone"><i class="bi bi-bar-chart-line"></i></span>
+                        <div>
+                            <span class="titulo-estatistica">Partidas analisadas</span>
+                            <strong class="numero-estatistica">43</strong>
 
-                        <div class="texto-resumo">
-                            <span class="titulo-resumo">Próxima mentoria</span>
-                            <span class="descricao-resumo"> Quinta-feira, 19h </span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </section>
+            </section>
+
+            <aside class="resumo-coluna">
+                <article class="painel-card card-resumo">
+                    <h2 class="titulo-card">Resumo do aluno</h2>
+
+                    <div class="conteudo-resumo">
+                        <div class="item-resumo resumo-objetivo">
+                            <span class="icone-resumo"><i class="bi bi-bullseye"></i></span>
+                            <div class="texto-resumo">
+                                <strong class="titulo-resumo">Objetivo atual</strong>
+                                <span class="descricao-resumo">Melhorar leitura de board e posicionamento.</span>
+                            </div>
+                        </div>
+
+                        <div class="item-resumo resumo-estudo">
+                            <span class="icone-resumo"><i class="bi bi-book"></i></span>
+                            <div class="texto-resumo">
+                                <strong class="titulo-resumo">Foco de estudo</strong>
+                                <span class="descricao-resumo">Speed control, matchups e construção de times.</span>
+                            </div>
+                        </div>
+
+                        <div class="item-resumo resumo-mentoria">
+                            <span class="icone-resumo"><i class="bi bi-calendar3"></i></span>
+                            <div class="texto-resumo">
+                                <strong class="titulo-resumo">Próxima mentoria</strong>
+                                <span class="descricao-resumo">Quinta-feira, 19h</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </aside>
+        </section>
     </main>
 </body>
 
